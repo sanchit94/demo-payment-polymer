@@ -135,15 +135,18 @@ class MyView2 extends PolymerElement {
 						mode: "cors",
 						cache: "no-cache",
 						headers: {
-								// "Content-Type": "application/json"
-								"Content-Type": "application/x-www-form-urlencoded",
+								'Access-Control-Allow-Methods':'POST',
+								'Access-Control-Allow-Headers':'application/json',
+								"Content-Type": "application/json"
+								// "Content-Type": "application/x-www-form-urlencoded",
 						},
 						redirect: "follow", // manual, *follow, error
 						body: JSON.stringify(data), // body data type must match "Content-Type" header
 				})
 				.then(response => response.json()); // parses response to JSON
 		}
-		postData('https://dev275faik-test.serveo.net/initpayment', sendData);
+		postData('https://dev275faik-test.serveo.net/initpayment', sendData)
+		.then(res => console.log(res));
 			
 	}
 }

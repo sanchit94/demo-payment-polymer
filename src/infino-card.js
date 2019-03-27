@@ -16,9 +16,11 @@ class InfinoCard extends PolymerElement {
         </style>
         <div class="container">
             <div class="card">
-                <div class="circle">1</div>
                 <h1>Infino</h1>
-                <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
+                <p>Card Number: 4633812848133466</p>
+                <p>Expiry: 01/20</p>
+                <p>CVV: 234</p>
+                <p>PIN: 1221</p>
             </div>
         </div>
         `;
